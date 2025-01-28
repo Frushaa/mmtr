@@ -10,22 +10,6 @@ function factorial(n) {
     return result;
 }
 
-document.getElementById('calculateButton').addEventListener('click', function() {
-    const numberInput = document.getElementById('numberInput').value;
-    if (numberInput === "") {
-        document.getElementById('result').textContent = "Пожалуйста, введите число.";
-        return;
-    }
-    const number = parseInt(numberInput);
-    if (number > 1000) {
-        document.getElementById('result').textContent = "Число не должно превышать 1000.";
-        return;
-    }
-
-    const result = factorial(number);
-    document.getElementById('result').textContent = `Факториал ${number} равен ${result}`;
-});
-
 //2
 function maxlength(text) {
     const words = text.split("");
