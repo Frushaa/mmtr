@@ -2,6 +2,11 @@ body {
     margin: 0;
 }
 
+.global {
+    display: GRID;
+    justify-content: center;
+}
+
 .display {
     display: flex;
     margin: 0px 120px;
@@ -31,12 +36,12 @@ body {
     color: #000;
     text-decoration: none;
     line-height: 21px;
-    margin-left: 50px
+    margin-left: 50px;
 }
 
 .nav {
     margin-left: 217px;
-    position: flex;
+    display: flex;
     width: 472px;
     height: 21px;
 }
@@ -46,10 +51,39 @@ body {
 }
 
 .lupa {
-    margin-left: 285.23px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    margin-left: 278.23px;
 }
 
-.container {
+#search-icon {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#search-icon.hidden {
+    opacity: 0;
+    pointer-events: none; 
+}
+
+#search-input.active {
+    width: 200px;
+    display: block;
+    margin-left: -210px;
+    margin-right: -10px;
+    background-color: #e0e0e077;
+}
+
+#search-input {
+    width: 200px;
+    border: none;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+    display: none;
+}
+
+.block-WeHelpYou {
     background: #154444;
     display: flex;
     width: 1200px;
@@ -58,9 +92,10 @@ body {
     margin-top: 26.85px;
 }
 
-.img1 {
+.img-chair {
     width: 411px;
     height: 560px;
+    object-fit: cover;
 }
 
 
@@ -93,18 +128,22 @@ body {
     margin: 0px;
 }
 
+.svg-exploreMore:hover{
+    opacity: 90%;
+}
+
 .svg-exploreMore {
     width: 172px;
     height: 56px;
 }
 
-.container2 {
+.Block-trustedBy {
     margin: 140px 120px 0px 120px;
     width: 1200px;
     height: 134px;
 }
 
-.container2 h1 {
+.Block-trustedBy h1 {
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 700;
@@ -118,16 +157,15 @@ body {
     margin-left: 118.6px;
 }
 
-.container3 {
+.block-AboutUs {
     display: flex;
-    margin: 140px 120px 0px 120px;
+    margin: 200px 120px 0px 120px;
     Width: 1200px;
     height: 612.21px;
 }
 
 .container3-text {
-    display:block;
-    padding-top: 46.5px;
+    padding-top: 20.5px;
     margin-left: 100px;
 }
 
@@ -275,10 +313,29 @@ margin: 14px 0px 0px;
     margin: 14px 0px 0px;
 }
 
-.container4 {
+.OurPopularFurniture {
     width: 1200px;
     height: 584.88px;
     margin: 140px 120px 0px 120px;
+}
+
+.AllOfOur_sroll {
+    display: flex;
+}
+
+.scroll-arrow {
+    align-content: center;
+    margin: 10.56px 0px 0px 296.4px;
+}
+
+.right-arrow:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.left-arrow:hover {
+    opacity: 80%;
+    cursor: pointer;
 }
 
 .container4-text h2 {
@@ -321,6 +378,7 @@ margin: 14px 0px 0px;
 .img2 {
     width: 380px;
     height: 246.34px;
+    object-fit: cover;
 }
 
 .text-svg1 {
@@ -343,15 +401,29 @@ margin: 14px 0px 0px;
     margin: 0px;
 }
 
-.svg1 {
+.svg-like_repost {
     display: flex;
     width: 60px;
     height: 26px;
     padding: 0px 0px 0px 101.88px;
 }
 
+
+.svg-like:hover {
+    opacity: 90%;
+}
+
+.svg-like {
+    cursor: pointer;
+}
+
+.svg-repost:hover {
+    opacity: 90%;
+}
+
 .svg-repost {
     padding-left: 8px;
+    cursor: pointer;
 }
 
 .text-svg2 h1 {
@@ -366,10 +438,15 @@ margin: 14px 0px 0px;
     color: #154444;
 }
 
-.svg-button {
-    padding-left: 206.45px;
+.button-bynow:hover {
+    opacity: 90%;
+}
+
+.button-bynow {
+    margin-left: 206.45px;
     Width: 78.85px;
     Height: 32px;
+    cursor: pointer;
 }
 
 .rent2 {
@@ -383,6 +460,7 @@ margin: 14px 0px 0px;
 .img3 {
     width: 380px;
     height: 246.34px;
+    object-fit: cover;
 }
 
 .text-svg2 {
@@ -420,11 +498,21 @@ margin: 14px 0px 0px;
     margin-left: 30px ;
 }
 
-.container5 {
+.allFurniture {
     width: 1200px;
     height: 593.39px;
     margin: 140px 120px 0px 120px;
     text-align: center;
+}
+
+.option1:hover {
+    cursor: pointer;
+    opacity: 80%;
+}
+
+.option2:hover {
+    cursor: pointer;
+    opacity: 80%;
 }
 
 .container5-text {
@@ -509,15 +597,30 @@ width: 210px;
     height: 336.83px;
 }
 
+.living:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
 .living {
     width: 222px;
     height: 90px;
+}
+
+.dining:hover {
+    opacity: 80%;
+    cursor: pointer;
 }
 
 .dining {
     width: 222px;
     height: 90px;
     margin-top: 33.42px;
+}
+
+.bed:hover {
+    opacity: 80%;
+    cursor: pointer;
 }
 
 .bed {
@@ -532,9 +635,19 @@ width: 210px;
     margin-left: 35px;
 }
 
+.kitchen:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
 .kitchen {
     width: 222px;
     height: 90px;
+}
+
+.office:hover {
+    opacity: 80%;
+    cursor: pointer;
 }
 
 .office {
@@ -543,13 +656,18 @@ width: 210px;
     margin-top: 33.42px;
 }
 
+.hallway:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
 .hallway {
     width: 222px;
     height: 90px;
     margin-top: 33.42px
 }
 
-.container6 {
+.OurCustomers {
     display: flex;
     width: 1200px;
     height: 492.4248046875px;
@@ -609,7 +727,7 @@ width: 210px;
     padding: 40.25px 0px 0px 100.64px;
 }
 
-.container7 {
+.SubscribeToGet {
     width: 1200px;
     height: 394.32px;
     display: flex;
@@ -655,22 +773,101 @@ width: 210px;
     margin: 0px;
 }
 
-.svg-search {
-    width: 471.98px;
+.enteryouremail {
+    margin: 40px 0px 0px 364.5px;
+    width: 475.5px;
     height: 67px;
-    padding: 40px 364.01px 0px 364.01px;
+    background: #FFFFFF;
+    align-content: center;
+    display: flex ;
+    align-items: center;
 }
 
-.container8 {
+.convert-i-text {
+    width: 230px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+}
+
+#text::placeholder {
+    width: 185px;
+    height: 22px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #616161;
+    opacity: 50%;
+    outline: none;
+}
+
+.register:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.register {
+    margin: 0px 19.19px 0px 100px;
+    width: 125.32px;
+    height: 52px;
+    background-color: #305F64;
+}
+
+.register p {
+    width: 125.32px;
+    height: 22px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    text-align: center;
+    justify-content: center;
+}
+
+#text {
+    width: 185px;
+    height: 22px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #666666;    
+    outline: none;
+}
+
+.convert {
+    width: 19px;
+    height: 19px;
+    margin: 2px 0px 0px 15.52px;
+}
+
+.youremail {
+    width: 250px;
+    border: none;  
+    background: transparent;
+    margin-left: 12px;
+}
+
+.container-footer {
+    display: grid;
+    align-items: center;
+    justify-content: center;
     width: 1440px;
     height: 442px;
-    margin: 140px 0px 0px 0px;
+    padding-top: 140px;
+    margin: auto;
 }
 
 .footer {
     width: 1440px;
     height: 442px;
     background: #305F64;
+    justify-content: center;
 }
 
 .footer-info {
@@ -720,13 +917,23 @@ width: 210px;
     margin: 40px 0px 0px 0px;
 }
 
+.svg1-block1:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
 .svg-block1 {
     display: flex;
     margin: 20.46px 0px 0px 0px;
 }
 
+.svg2-block1:hover {
+    opacity: 80%;
+}
+
 .svg2-block1 {
-    padding-left: 15px;
+    margin-left: 15px;
+    cursor: pointer;
 }
 
 .block2 {
@@ -864,8 +1071,24 @@ width: 210px;
     margin: 30px 0px 0px 0px;
 }
 
-.svg-block4 {
-    padding-top: 40px;
+.EmailAddress {
+    width: 253px;
+    height: 48px;
+    background: #FFFFFF;
+    margin-top: 40px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.Email {
+    border: none;
+    margin-left: 22px;
+}
+
+.orange-button:hover {
+    opacity: 80%;
+    cursor: pointer;
 }
 
 .mark-line {
@@ -889,4 +1112,24 @@ width: 210px;
     line-height: 23px;
     color: #FFFFFF;
     margin: 0px;
+}
+
+.sofa-img {
+    width: 596px;
+    height: 577px;
+    margin: -26px 0px 0px -26px;
+    object-fit: cover;
+}
+
+.shadow-box {
+    width: 596px;
+    height: 577px;
+    background: #DEE4E2;
+    display: flex;
+    margin-left: 26px;
+}
+
+.box-img {
+    width: 631.24px;
+    height: 612.21px;
 }
